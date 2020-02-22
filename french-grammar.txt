@@ -1,0 +1,96 @@
+Non-Terminals:
+S   Sentence/Clause
+NP  Noun Phrase
+VP  Verb Phrase
+N   Noun
+PN  Proper Noun
+PR  Pronoun
+V   Verb
+DT  Determiner
+A   Adjective
+Vi  Intransitive Verb
+Vt  Transitive Verb
+PP  Prepositional Phrase
+IN  Preposition
+
+Grammars:
+
+S -> NP-Sg VP-3Sg
+S -> NP-Pl VP-3Pl
+S -> PR-1Sg VP-1SΩ
+S -> PR-2Sg VP-2Sg
+S -> PR-3Sg VP-3Sg
+S -> PR-1Pl VP-1Pl
+S -> PR-2Pl VP-2Pl
+S -> PR-3Pl VP-3Pl
+
+{Noun Phrase}
+
+NP-Sg -> NP-Sg PP | DT-Sg-Mas N-Sg-Mas | DT-Sg-Mas A-Sg-Mas N-Sg-Mas | DT-Sg-Mas N-Sg-Mas A-Sg-Mas |
+          PN-Sg | DT-Sg-Fem N-Sg-Fem | DT-Sg-Fem A-Sg-Fem N-Sg-Fem | DT-Sg-Fem N-Sg-Fem A-Sg-Fem 
+NP-Pl -> NP-Pl PP | DT-Pl N-Pl-Mas | DT-Pl A-Pl-Mas N-Pl-Mas | DT-Pl N-Pl-Mas A-Pl-Mas | 
+          DT-Pl N-Pl-Fem | DT-Pl A-Pl-Fem N-Pl-Fem | DT-Pl N-Pl-Fem A-Pl-Fem 
+
+
+{Verb Phrase}
+
+VP-1Sg -> VP-1Sg PP | Vt-1Sg NP-Sg | Vt-1Sg NP-Pl | Vi-1Sg | PR Vt-1Sg 
+VP-2Sg -> VP-2Sg PP | Vt-2Sg NP-Sg | Vt-2Sg NP-Pl | Vi-2Sg | PR Vt-2Sg 
+VP-3Sg -> VP-3Sg PP | Vt-3Sg NP-Sg | Vt-3Sg NP-Pl | Vi-3Sg | PR Vt-3Sg 
+VP-1Pl -> VP-1Pl PP | Vt-1Pl NP-Sg | Vt-1Pl NP-Pl | Vi-1Pl | PR Vt-1Pl 
+VP-2Pl -> VP-2Pl PP | Vt-2Pl NP-Sg | Vt-2Pl NP-Pl | Vi-2Pl | PR Vt-2Pl 
+VP-3Pl -> VP-3Pl PP | Vt-3Pl NP-Sg | Vt-3Pl NP-Pl | Vi-3Pl | PR Vt-3Pl 
+
+{Prepositional Phrase}
+
+PP -> IN NP-Sg | IN NP-Pl | IN PR-1Sg | IN PR-2Sg | IN PR-3Sg | IN PR-1Pl | IN PR-2Pl | IN PR-3Pl | IN
+
+{Adjectives}
+
+A-Sg-Mas -> bleu | amusant | parfumé
+A-Sg-Fem -> bleue | amusante | parfumée
+A-Pl-Mas -> bleus | amusants | parfumés
+A-Pl-Fem -> bleues | amusantes | parfumées
+
+{Determiners}
+
+DT-Sg-Mas -> le | un
+DT-Sg-Fem -> la | une
+DT-Pl -> les
+
+{Pronouns}
+
+PR-1Sg -> je | moi
+PR-2Sg -> tu | vous | toi 
+PR-3Sg -> il | elle | lui 
+PR-1Pl -> nous
+PR-2Pl -> vous
+PR-3Pl -> ils | elles | eux | soi
+
+{Prepositions}
+
+IN -> à | de | pour | devant | avant | avec | sans
+
+{Verbs}
+
+Vt-1Sg -> joue | chante | représente
+Vt-2Sg -> joues | chantes | représentes 
+Vt-3Sg -> joue | chante | représente
+Vt-1Pl -> jouons | chantons | représentons 
+Vt-2Pl -> jouez | chantez | représentez
+Vt-3Pl -> jouent | chantent | représentent
+Vi-1Sg -> dors | cours | tombe
+Vi-2Sg -> dors | cours | tombes 
+Vi-3Sg -> dort | court | tombe
+Vi-1Pl -> dormons | courons | tombons
+Vi-2Pl -> dormez | courez | tombez
+Vi-3Pl -> dorment | courent | tombent
+ 
+
+{Nouns}
+
+N-Sg-Mas -> vieux | cheval | poisson 
+N-Pl-Mas -> vieux | chevaux | poissons 
+N-Sg-Fem -> chaise | eau | poule | chanson
+N-Pl-Fem -> chaises | eaux | poules | chansons
+PN-Sg -> Amérique | Napoléon | Méditerranée 
